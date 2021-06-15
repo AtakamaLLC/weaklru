@@ -1,0 +1,33 @@
+language: python
+cache: 
+  pip: True
+
+sudo: false
+
+jobs:
+    include:
+    - name: unit
+      script:
+        - poetry install
+        - poetry run pytest
+      python:
+        - '3.6'
+        - '3.9'
+    - stage: deploy
+      if: type = push and tag =~ ^v
+      python:
+        - '3.6'
+      script:
+        - poetry build
+        - poetry publish
+
+after_success:
+    - codecov --env TRAVIS_OS_NAME
+
+branches:
+    only:
+    - master
+    - /^v/
+
+install:
+- pip install codecov
