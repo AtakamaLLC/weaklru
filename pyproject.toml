@@ -1,0 +1,11 @@
+[tool.poetry]
+name = "weaklru"
+version = "0.1.0"
+description = "Combination of weakref cache and LRU cache."
+authors = ["Erik Aronesty <erik@q32.com>"]
+
+[tool.poetry.dependencies]
+python = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.4"

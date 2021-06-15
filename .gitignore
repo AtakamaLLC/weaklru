@@ -1,0 +1,39 @@
+# coverage annotations
+*,cover
+
+# backup file from sed in the deploy.sh script
+*.bak
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# python profiler
+prof/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# pycharm
+.idea
+
+
+# venv
+venv
