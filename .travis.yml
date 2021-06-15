@@ -30,4 +30,4 @@ branches:
     - /^v/
 
 install:
-- pip install codecov
+- pip install codecov poetry
